@@ -1,1 +1,3 @@
 # Multi-Drop-Bus
+
+The multidrop bus is an eight-bit synchronous sequential circuit used to copy the contents from the main bus. It consists of 3 registers, 8 bits of each. As soon as the clock arrives, depending on the enable signal of a particular register, data from the bus is latched to the output of the particular register. Enable ‘A’ has the highest priority, then B and C respectively. If 2 enables are active at a time, then the enable of the highest priority is considered. The circuit has asynchronous reset which means that irrespective of the clock if the reset signal arrives, all registers get cleared. This kind of bus is useful in the case of a microprocessor where it has to send the data to a particular peripheral.
